@@ -1,0 +1,61 @@
+<!-- Srinidhi Somangili
+sksomang@ucsc.edu -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Draw a blue rectangle (canvas version)</title>
+  </head>
+
+  <body onload="main()">
+    <canvas id="example" width="400" height="400">
+      Please use a browser that supports "canvas"
+    </canvas>
+    <script src="asg0.js"></script>
+    <script src="lib/cuon-matrix-cse160.js"></script>
+  <!-- <script>
+    var canvas = document.getElementById('example');
+    var ctx = canvas.getContext('2d');
+    ctx.beginPath(); // Start a new path
+    ctx.moveTo(0, 0); // Move the pen to origin
+    ctx.lineTo(20, 20); // Draw a line to (x, y)
+    ctx.strokeStyle = '#ff0000'
+    ctx.stroke(); // Render the path
+  </script> -->
+  <br>
+  <label for="name">V1: x</label>
+  <input type="text" id="v1x" name="v1x" required minlength="4" maxlength="8" size="10" /> 
+  <label for="name">y</label>
+  <input type="text" id="v1y" name="v1y" required minlength="4" maxlength="8" size="10" />
+  <br>
+
+  <label for="name">V2: x</label>
+  <input type="text" id="v2x" name="v2x" required minlength="4" maxlength="8" size="10" /> 
+  <label for="name">y</label>
+  <input type="text" id="v2y" name="v2y" required minlength="4" maxlength="8" size="10" />
+  <br>
+
+  <input type="button" value="Draw" onclick="handleDrawEvent()"></input>
+  <br><br>
+
+  <label for="opssel">Operation:</label>
+
+    <select name="ops" id="opssel">
+      <option value="add">Add</option>
+      <option value="sub">Subtract</option>
+      <option value="mul">Multiply</option>
+      <option value="div">Divide</option>
+      <option value="mag">Magnitude</option>
+      <option value="norm">Normalize</option>
+      <option value="ang">Angle between</option>
+      <option value="area">Area</option>
+    </select>
+  <label for="name">Scalar:</label>
+  <input type="text" id="scalar" name="scalar" required minlength="4" maxlength="8" size="10" /> 
+  <br>
+  
+  <input type="button" value="Draw" onclick="handleDrawOperationEvent()"></input>
+  
+  </body>
+</html>
